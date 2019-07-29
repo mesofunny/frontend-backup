@@ -2,7 +2,9 @@
 
 // imports 
 import React from 'react';
-import { Grid, Image } from "semantic-ui-react";
+import { Grid } from "semantic-ui-react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 const HomePageGrid = () => {
     return (
@@ -10,25 +12,25 @@ const HomePageGrid = () => {
             <Grid columns={3}>
                 <Grid.Row>
                     <Grid.Column>
-                        <Image src='' />
+                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src='' />
+                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src='' />
+                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
                     </Grid.Column>
                 </Grid.Row>
 
                 <Grid.Row>
                     <Grid.Column>
-                        <Image src='' />
+                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src='' />
+                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
                     </Grid.Column>
                     <Grid.Column>
-                        <Image src='' />
+                        <FontAwesomeIcon icon={faCoffee} className="home-icons"/>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

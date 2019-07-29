@@ -12,15 +12,24 @@
     justify-content: center; 
     text-align: center;
     margin: 20px auto;  
-    padding: 20px 0;
+    padding: 140px;
     background: rgb(216, 212, 212); 
 }
 
 .daily-joke {
-    font-size: 5.5vw; 
+    font-size: 4vw; 
 }
 
 .home-grid {
+    /* border: 1px solid green;  */
     width: 70%; 
-    margin: 20px auto;  
+    margin: 20px auto; 
+    display: flex;
+    justify-content: space-between; 
+}
+
+.home-icons {
+    border: 3px solid rgb(216, 212, 212); 
+    font-size: 8vw; 
+    padding: 25px; 
 }
