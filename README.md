@@ -40,7 +40,7 @@ Our application incorporates some great technologies such as the following liste
 
 :princess: **Shelby Diamond**
 
-- Twitter: [@Shelby_NDiamond](https://twitter.com/Shelby_N Diamond)
+- Twitter: [@Shelby_NDiamond](https://twitter.com/Shelby_NDiamond)
 - Github: [@ShelbyDiamond](https://github.com/ShelbyDiamond)
 
 ## Show your support
