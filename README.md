@@ -24,14 +24,14 @@ Our application incorporates some great technologies such as the following liste
 
 ## Author
 
-:koala: **Shelby Diamond**
+:grinning: **Shelby Diamond**
 
 - Twitter: [@Shelby_N Diamond](https://twitter.com/Shelby_N Diamond)
 - Github: [@ShelbyDiamond](https://github.com/ShelbyDiamond)
 
 ## Show your support
 
-Give a :sparkles: if this project helped you!
+Give a :star2:⭐️ if this project helped you!
 
 ---
 
