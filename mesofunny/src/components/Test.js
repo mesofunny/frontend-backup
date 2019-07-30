@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux'
-import { fetchData } from '../store/actions'
+import { fetchData, addData } from '../store/actions'
 
 const Test = (props) => {
 
@@ -14,7 +14,10 @@ const Test = (props) => {
         props.fetchData()
     }, [])
 
-    
+    const addJoke = (e) => {
+        e.preventDefault()
+        addData()
+    }
     
     return ( 
         <div>
@@ -44,5 +47,5 @@ const mapStateToProps = state => {
 
 export default connect(
     mapStateToProps,
-    { fetchData }
+    { fetchData, addData }
 )(Test)
