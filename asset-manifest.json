@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/mesofunny/frontend-backup/static/css/main.6ae8b7c8.chunk.css",
+    "main.js": "/mesofunny/frontend-backup/static/js/main.4d795c88.chunk.js",
+    "main.js.map": "/mesofunny/frontend-backup/static/js/main.4d795c88.chunk.js.map",
+    "runtime~main.js": "/mesofunny/frontend-backup/static/js/runtime~main.0936d1b9.js",
+    "runtime~main.js.map": "/mesofunny/frontend-backup/static/js/runtime~main.0936d1b9.js.map",
+    "static/css/2.d5a4ac23.chunk.css": "/mesofunny/frontend-backup/static/css/2.d5a4ac23.chunk.css",
+    "static/js/2.c7b5779e.chunk.js": "/mesofunny/frontend-backup/static/js/2.c7b5779e.chunk.js",
+    "static/js/2.c7b5779e.chunk.js.map": "/mesofunny/frontend-backup/static/js/2.c7b5779e.chunk.js.map",
+    "index.html": "/mesofunny/frontend-backup/index.html",
+    "precache-manifest.b7752c5cd82add3ac563b52ec4d74233.js": "/mesofunny/frontend-backup/precache-manifest.b7752c5cd82add3ac563b52ec4d74233.js",
+    "service-worker.js": "/mesofunny/frontend-backup/service-worker.js",
+    "static/css/2.d5a4ac23.chunk.css.map": "/mesofunny/frontend-backup/static/css/2.d5a4ac23.chunk.css.map",
+    "static/css/main.6ae8b7c8.chunk.css.map": "/mesofunny/frontend-backup/static/css/main.6ae8b7c8.chunk.css.map",
+    "static/media/semantic.min.css": "/mesofunny/frontend-backup/static/media/outline-icons.ef60a4f6.woff"
+  }
+}
