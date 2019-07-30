@@ -1,11 +1,14 @@
 import React, { useState } from "react";
+import { connect } from 'react-redux'
+import { userLogin, register } from '../store/actions'
+import { withRouter } from 'react-router-dom'
 import '../login.css'
 
 const LoginRegister = (props) => {
   const [input, setInput] = useState({
     form: {
-      firstName: "",
-      lastName: "",
+      firstname: "",
+      lastname: "",
       email: "",
       password: ''
     }
@@ -25,8 +28,20 @@ const LoginRegister = (props) => {
     });
   };
 
-  const loginRegister = () => {
-      props.history.push('/jokes')
+  const userLogin = (e) => {
+      e.preventDefault()
+      props.userLogin(input.form.email, input.form.password).then(res => {
+          console.log('res', res)
+          if (res) {
+            props.history.push('/jokes')
+          }
+      }) 
+  }
+
+  const userRegister = (e) => {
+    e.preventDefault()
+    props.register(input.form)
+    props.history.push('/jokes')
   }
 
   if (!login) {
@@ -51,13 +66,13 @@ const LoginRegister = (props) => {
             onChange={handleChanges}
           />
           <input
-            type="text"
+            type="password"
             name="password"
             value={input.form.password}
             placeholder="password"
             onChange={handleChanges}
           />
-          <button onClick={loginRegister}>Login</button>
+          <button onClick={userLogin}>Login</button>
         </form>
       </div>
     );
@@ -77,15 +92,15 @@ const LoginRegister = (props) => {
         <form>
           <input
             type="text"
-            name="firstName"
-            value={input.form.firstName}
+            name="firstname"
+            value={input.form.firstname}
             placeholder="First Name"
             onChange={handleChanges}
           />
           <input
             type="text"
-            name="lastName"
-            value={input.form.lastName}
+            name="lastname"
+            value={input.form.lastname}
             placeholder="Last Name"
             onChange={handleChanges}
           />
@@ -103,11 +118,25 @@ const LoginRegister = (props) => {
             placeholder="password"
             onChange={handleChanges}
           />
-          <button onClick={loginRegister}>Register</button>
+          <button onClick={userRegister}>Register</button>
         </form>
       </div>
     );
   }
 }
 
-export default LoginRegister
+const mapStateToProps = state => {
+    console.log(state)
+    return {
+        error: state.error,
+        isFetching: state.isFetching,
+        jokes: state.jokes,
+        user: state.user
+    }
+}
+
+export default withRouter(
+    connect(
+    mapStateToProps,
+    { userLogin, register }
+)(LoginRegister))
