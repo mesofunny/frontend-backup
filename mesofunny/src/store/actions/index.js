@@ -10,10 +10,10 @@ export const FETCH_DATA_FAILURE = 'FETCH_DATA_FAILURE'
 export const fetchData = () => dispatch => {
     dispatch({ type: FETCH_DATA_START})
     axios
-        .get(`/api/v1/jokes`)
+        .get(`https://mesofunny.herokuapp.com/api/v1/jokes`)
         .then(response => {
             console.log(response)
-            dispatch({ type: FETCH_DATA_SUCCESS, payload: response.data})
+            dispatch({ type: FETCH_DATA_SUCCESS, payload: response.data.jokes})
         })
         .catch(err => console.log(err.response))
     }
@@ -23,10 +23,10 @@ export const ADD_DATA_SUCCESS = 'ADD_DATA_SUCCESS'
 export const ADD_DATA_FAILURE = 'ADD_DATA_FAILURE'
 
 
-export const addData = (smurf) => dispatch => {
+export const addData = (newJoke) => dispatch => {
     dispatch({ type: ADD_DATA_START})
     axiosWithAuth()
-        .post(`http://localhost:3333/smurfs`, smurf)
+        .post(``, newJoke)
         .then(response => {
             console.log(response)
             dispatch({ type: ADD_DATA_SUCCESS, payload: response.data})
@@ -42,7 +42,7 @@ export const DELETE_DATA_FAILURE = 'DELETE_DATA_FAILURE'
 export const deleteData = (id) => dispatch => {
     dispatch({ type: ADD_DATA_START})
     axiosWithAuth()
-        .delete(`http://localhost:3333/smurfs/${id}`)
+        .delete(``)
         .then(response => {
             console.log(response)
             dispatch({ type: ADD_DATA_SUCCESS, payload: response.data})
@@ -58,7 +58,7 @@ export const EDIT_DATA_FAILURE = 'EDIT_DATA_FAILURE'
 export const editData = (id, editSmurf) => dispatch => {
     dispatch({ type: EDIT_DATA_START})
     axiosWithAuth()
-        .put(`http://localhost:3333/smurfs/${id}`, editSmurf)
+        .put(``, editSmurf)
         .then(response => {
             console.log(response)
             dispatch({ type: EDIT_DATA_SUCCESS, payload: response.data})
@@ -72,6 +72,7 @@ export const LOGIN_FAILURE = 'LOGIN_FAILURE'
 
 
 export const userLogin = (email, password) => dispatch => {
+    console.log(email, password)
     dispatch({ type: LOGIN_START })
     return axiosWithAuth()
         .post(`/api/v1/users/login`, {
@@ -86,7 +87,7 @@ export const userLogin = (email, password) => dispatch => {
         })
         .catch(res => {
             console.log(res)
-            dispatch({ type: LOGIN_FAILURE, payload: res.data})
+            dispatch({ type: LOGIN_FAILURE, payload: res})
         })
     }
 

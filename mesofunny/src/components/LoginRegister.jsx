@@ -30,7 +30,7 @@ const LoginRegister = (props) => {
 
   const userLogin = (e) => {
       e.preventDefault()
-      props.userLogin(input.form).then(res => {
+      props.userLogin(input.form.email, input.form.password).then(res => {
           console.log('res', res)
           if (res) {
             props.history.push('/jokes')

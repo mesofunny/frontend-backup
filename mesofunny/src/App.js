@@ -40,7 +40,7 @@ function App() {
       }
       /> */}
 
-      <PrivateRoute path="/test" component={Test} />
+      <Route path="/test" component={Test} />
       </Router>
     </>
   );
