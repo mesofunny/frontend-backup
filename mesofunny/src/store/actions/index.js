@@ -26,7 +26,7 @@ export const ADD_DATA_FAILURE = 'ADD_DATA_FAILURE'
 export const addData = (newJoke) => dispatch => {
     dispatch({ type: ADD_DATA_START})
     axiosWithAuth()
-        .post(``, newJoke)
+        .post(`/api/v1/users/jokes`, newJoke)
         .then(response => {
             console.log(response)
             dispatch({ type: ADD_DATA_SUCCESS, payload: response.data})
@@ -42,7 +42,7 @@ export const DELETE_DATA_FAILURE = 'DELETE_DATA_FAILURE'
 export const deleteData = (id) => dispatch => {
     dispatch({ type: ADD_DATA_START})
     axiosWithAuth()
-        .delete(``)
+        .delete(`/api/v1/users/jokes/${id}`, id)
         .then(response => {
             console.log(response)
             dispatch({ type: ADD_DATA_SUCCESS, payload: response.data})
@@ -55,10 +55,10 @@ export const EDIT_DATA_SUCCESS = 'EDIT_DATA_SUCCESS'
 export const EDIT_DATA_FAILURE = 'EDIT_DATA_FAILURE'
 
 
-export const editData = (id, editSmurf) => dispatch => {
+export const editData = (id, editJoke) => dispatch => {
     dispatch({ type: EDIT_DATA_START})
     axiosWithAuth()
-        .put(``, editSmurf)
+        .put(`/api/v1/users/jokes/${id}`, editJoke)
         .then(response => {
             console.log(response)
             dispatch({ type: EDIT_DATA_SUCCESS, payload: response.data})
